@@ -42,10 +42,10 @@ class Inventory:
                     return False
     def product_rename(self,id_number,index): # Edits product attributes
         for _ in self.products:
-            if _.id_number == int(id_number):
+            if _.id_number == id_number:
                 
                 if index == 1: # Edit name
-                    new = ''
+                    new = '5'
                     while new.isdigit():
                         new = input('\nEnter New Product Name: ')
                         if new.isdigit():
@@ -75,13 +75,16 @@ class Inventory:
                     _.price = int(new)
                     print('\nSuccessfully changed!')
 
+                elif index == 0:
+                    break
 
-    def check_duplicate(self,id_num,name_given): # Checks whether name/id_number is already chosen
+
+    def check_duplicate(self,name_given,id_num,): # Checks whether name/id_number is already chosen
         for _ in self.products:
 
             if _.name == name_given:
                 return True
-            elif _.id_number == int(id_num):
+            elif _.id_number == id_num:
                 return True
             else:
                 continue
