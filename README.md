@@ -1,2 +1,2 @@
-# Learning-Python-College-Registration-App
-Practicing OOP basics.
+# Learning-Python-Product-Inventory-App
+Practicing OOP basics. Works only on terminal
